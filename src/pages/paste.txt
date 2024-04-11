@@ -1,0 +1,12 @@
+<div className="form-group rating">
+          <label htmlFor="rating">Rating:</label>
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span key={star}>
+              <FontAwesomeIcon
+                icon={faStar}
+                className={star <= rating ? 'fas text-warning' : 'far text-muted'}
+                onClick={() => handleRatingChange(star)}
+              />
+            </span>
+          ))}
+        </div>

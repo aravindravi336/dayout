@@ -11,6 +11,7 @@ import InputRange from './pages/InputRange';
 import StudentPackages from './pages/StudentPackages';
 import StudentBook from './pages/StudentBook';
 import ViewPackage from './pages/ViewPackage';
+import Blog from './pages/Blog';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route  path='/student' element = {<StudentPackages/>}/>
           <Route path='/studentbook' element = {<StudentBook/>}/>
           <Route path='/view' element = {<ViewPackage/>}/>
+          <Route path='/blog' element = {<Blog/>}/>
         
          
 
