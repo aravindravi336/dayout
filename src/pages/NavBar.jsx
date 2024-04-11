@@ -35,7 +35,7 @@ const NavBar = () => {
                 <ul class="dropdown-menu">
                   <li><Link class="dropdown-item" to="#">Stay</Link></li>
                   <li><Link class="dropdown-item" to="/chat">ChatBot</Link>
-                  <li><Link class="dropdown-item" to="#">Blogs</Link>
+                  <li><Link class="dropdown-item" to="/blog">Blogs</Link>
                   </li></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li><Link class="dropdown-item" to="/" onClick={handleLogout}>Log Out</Link></li>
