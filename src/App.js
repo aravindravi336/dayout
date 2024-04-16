@@ -12,6 +12,9 @@ import StudentPackages from './pages/StudentPackages';
 import StudentBook from './pages/StudentBook';
 import ViewPackage from './pages/ViewPackage';
 import Blog from './pages/Blog';
+import UserProfilePage from './pages/profile/UserProfilePage';
+import Stay from './pages/Stay';
+import Payment from './pages/Payment';
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
           <Route path='/studentbook' element = {<StudentBook/>}/>
           <Route path='/view' element = {<ViewPackage/>}/>
           <Route path='/blog' element = {<Blog/>}/>
+          <Route path='/profile' element = {<UserProfilePage/>}/>
+          <Route path='/stay' element = {<Stay/>}/>
+          <Route path='/pay' element = {<Payment/>}/>
         
          
 
