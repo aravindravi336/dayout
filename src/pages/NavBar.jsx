@@ -26,24 +26,17 @@ const NavBar = () => {
                 <Link class="nav-link" to='/student'>Student Packages</Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" to='/student'>Book Stays</Link>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><Link class="dropdown-item" to="#">Stay</Link></li>
-                  <li><Link class="dropdown-item" to="/chat">ChatBot</Link>
-                  <li><Link class="dropdown-item" to="/blog">Blogs</Link>
-                  </li></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><Link class="dropdown-item" to="/" onClick={handleLogout}>Log Out</Link></li>
-                </ul>
+                <Link class="nav-link" to='/stay'>Book Stays</Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link" to="#">Profile</Link>
+                <Link class="nav-link" to='/blog'>Feedback</Link>
               </li>
+              
+            
+              <li class="nav-item">
+                <Link class="nav-link" to="/profile">Profile</Link>
+              </li>
+              <li><Link class="nav-link" to="/" onClick={handleLogout}>Log Out</Link></li>
             </ul>
           </div>
         </div>
