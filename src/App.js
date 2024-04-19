@@ -10,11 +10,16 @@ import BookPackage from './pages/Book_Package';
 import InputRange from './pages/InputRange';
 import StudentPackages from './pages/StudentPackages';
 import StudentBook from './pages/StudentBook';
-import ViewPackage from './pages/ViewPackage';
+import ViewPackages from './pages/admin_pages/ViewPackages';
 import Blog from './pages/Blog';
 import UserProfilePage from './pages/profile/UserProfilePage';
 import Stay from './pages/Stay';
 import Payment from './pages/Payment';
+import Admin_SideBar from './pages/admin_pages/Admin_SideBar'
+import Admin_NavBar from './pages/admin_pages/Admin_NavBar'
+import Admin_Add from './pages/admin_pages/Admin_Add';
+import Admin_AddStudent from './pages/admin_pages/Admin_AddStudent';
+import ViewStudentPackages from './pages/admin_pages/VIewStudentPackages';
 
 
 function App() {
@@ -33,12 +38,16 @@ function App() {
           <Route path='/range' element = {<InputRange/>}/>
           <Route  path='/student' element = {<StudentPackages/>}/>
           <Route path='/studentbook' element = {<StudentBook/>}/>
-          <Route path='/view' element = {<ViewPackage/>}/>
           <Route path='/blog' element = {<Blog/>}/>
           <Route path='/profile' element = {<UserProfilePage/>}/>
           <Route path='/stay' element = {<Stay/>}/>
           <Route path='/pay' element = {<Payment/>}/>
-        
+          <Route path='/adminviewstudent' element ={<ViewStudentPackages/>}/>
+          <Route path='/adminviewpackage' element ={<ViewPackages/>}/>
+          <Route path='/adminsidebar' element = {<Admin_SideBar/>}/>
+          <Route path='/adminnavbar' element = {<Admin_NavBar/>}/>
+          <Route path='/adminadd' element = {<Admin_Add/>}/>
+          <Route path='/adminaddstudent' element = {<Admin_AddStudent/>} />       
          
 
         </Routes>

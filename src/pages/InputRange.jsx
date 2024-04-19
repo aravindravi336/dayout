@@ -48,7 +48,7 @@ const InputRange = () => {
               <input
                 type="range"
                 min="0"
-                max="15000"
+                max="30000"
                 step="1000"
                 value={highBudget}
                 onChange={handleHighBudgetChange}
@@ -64,10 +64,11 @@ const InputRange = () => {
           {packages.map((packageItem) => (
             <div key={packageItem._id} className="col col-12 col-sm-6 col-md-4 col-lg-3">
               <div className="card shadow p-3 mb-5 bg-white rounded">
+              <img src={packageItem.image} className="card-img-top" alt="..." />
                 <h5 className="card-title">{packageItem.package_name}</h5>
                 <div className="card-body">
                   <h5 className="card-title">{packageItem.price}</h5>
-                  <a href="/studentbook" className="btn btn-primary">Book Now</a>
+                  <a href="/studentbook" className="btn btn-outline-primary">Book Now</a>
                 </div>
               </div>
             </div>

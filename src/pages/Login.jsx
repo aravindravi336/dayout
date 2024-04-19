@@ -24,7 +24,15 @@ const Login = () => {
           alert(response.data.message);
           // Redirect to home page after successful login
           navigate("/home");
-        } else {
+        } 
+        else if(response.data.message === "Admin login successful")
+        {
+          alert(response.data.message)
+          navigate("/adminadd");
+        }
+        
+        
+        else {
           // Handle other messages if needed
           alert(response.data.message);
         }
