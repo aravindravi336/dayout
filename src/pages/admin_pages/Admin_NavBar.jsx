@@ -15,7 +15,7 @@ const Admin_Navbar = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
       <li class="nav-item">
-          <Link class="nav-link active" aria-current="page" to="">Bookings</Link>
+          <Link class="nav-link active" aria-current="page" to="/adminviewpackage">Bookings</Link>
         </li>
         <li class="nav-item">
           <Link class="nav-link active" aria-current="page" to="/adminviewstudent">Student Bookings</Link>
