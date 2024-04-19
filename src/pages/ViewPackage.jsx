@@ -9,7 +9,7 @@ const ViewPackage = () => {
     useEffect(() => {
         const fetchPackages = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/AdminPackage/view'); // Assuming your backend endpoint is '/api/packages'
+                const response = await axios.get('http://localhost:5000/AdminPackage/view');
                 setPackages(response.data);
             } catch (error) {
                 console.error('Error fetching packages:', error);

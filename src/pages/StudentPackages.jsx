@@ -39,7 +39,7 @@ const StudentPackages = () => {
                     <h5 className="card-title">{pkg.package_name}</h5>
                     <p className="card-text">Explore {pkg.package_name}.</p>
                     <p className="card-text">{pkg.days}.</p>
-                    <Link to="/studentbook" className="btn btn-primary">
+                    <Link to="/studentbook" className="btn btn-outline-warning">
                       Book Now
                     </Link>
                   </div>
