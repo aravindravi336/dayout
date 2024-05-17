@@ -36,7 +36,7 @@ const Packages = () => {
                   <img src={pkg.image} className="card-img-top" alt="..." />
                   <div className="card-body">
                     <h5 className="card-title">{pkg.package_name}</h5>
-                    <p className="card-text">Explore the beautiful {pkg.package_name}.</p>
+                    <p className="card-text">Explore {pkg.package_name}.</p>
                     <p className="card-text">{pkg.days}.</p>
                     <Link to="/book" className="btn btn-outline-warning">Book Now</Link>
                   </div>

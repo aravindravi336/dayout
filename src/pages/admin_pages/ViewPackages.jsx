@@ -18,14 +18,17 @@ const ViewStudentPackages = () => {
         }
     };
 
-   const markAsDone = async (id) => {
-    try {
-        await axios.delete(`http://localhost:5000/Student/delete/${id}`);
-        fetchPackages(); // Refresh packages after marking as done
-    } catch (error) {
-        console.error('Error marking package as done:', error);
-    }
-};
+    const markAsDone = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5000/Package/delete/${id}`).then((response)=>{
+                console.log(response.data);
+            });
+            fetchPackages();
+        } catch (error) {
+            console.error('Error marking package as done:', error);
+        }
+    };
+
 
 
     const markAsNotCompleted = async (id) => {
@@ -41,7 +44,7 @@ const ViewStudentPackages = () => {
         <div>
             <Admin_Navbar />
             <div className="container">
-                
+
                 <div className="row g-3">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12-col-xxl-12">
                         <table className="table">
@@ -74,12 +77,7 @@ const ViewStudentPackages = () => {
                                             >
                                                 Mark as Done
                                             </button>
-                                            <button
-                                                className="btn btn-danger"
-                                                onClick={() => markAsNotCompleted(pkg._id)}
-                                            >
-                                                Mark as Not Completed
-                                            </button>
+                                            
                                         </td>
                                     </tr>
                                 ))}
