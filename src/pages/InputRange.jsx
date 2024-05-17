@@ -47,8 +47,8 @@ const InputRange = () => {
               />
               <input
                 type="range"
-                min="0"
-                max="30000"
+                min="15000"
+                max="50000"
                 step="1000"
                 value={highBudget}
                 onChange={handleHighBudgetChange}
@@ -68,7 +68,7 @@ const InputRange = () => {
                 <h5 className="card-title">{packageItem.package_name}</h5>
                 <div className="card-body">
                   <h5 className="card-title">{packageItem.price}</h5>
-                  <a href="/studentbook" className="btn btn-outline-primary">Book Now</a>
+                  <a href="/book" className="btn btn-outline-primary">Book Now</a>
                 </div>
               </div>
             </div>

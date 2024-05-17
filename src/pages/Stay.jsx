@@ -47,26 +47,26 @@ const Stay = () => {
 
             <div class="card-group">
               <div class="card">
-                <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww" class="card-img-top" alt="..." />
+                <img src="https://www.travelandleisure.com/thmb/rMPmRcvZKIpEmyQoaCwhmXdoGAQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/waldorf-astoria-maldives-ithaafushi-00_ASIARESORTSWB22-ba575bbc118b453d8683c4b7b673a4df.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Jaipur</h5>
-                  <p class="card-text">Explore the beauty of Jaipur</p>
+                  <h5 class="card-title">Luxury Resorts</h5>
+                 
                   <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 </div>
               </div>
               <div class="card">
-                <img src="https://images.unsplash.com/photo-1578564969231-039947801495?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hbmFsaXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="..." />
+                <img src="https://i.natgeofe.com/n/fb42b3ae-aa34-488d-916b-0745491be3bd/Mountain-tent-looking-out_4x3.jpg" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Manali</h5>
-                  <p class="card-text">Explore the mountain ranges</p>
+                  <h5 class="card-title">Tent Stays</h5>
+                 
                   <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 </div>
               </div>
               <div class="card">
-                <img src="https://images.unsplash.com/photo-1590393275627-0c48482c60e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdvYXxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="..." />
+                <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <h5 class="card-title">Goa</h5>
-                  <p class="card-text">Sample Description</p>
+                  <h5 class="card-title">Beach Resorts</h5>
+        
                   <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                 </div>
               </div>

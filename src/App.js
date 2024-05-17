@@ -20,6 +20,9 @@ import Admin_NavBar from './pages/admin_pages/Admin_NavBar'
 import Admin_Add from './pages/admin_pages/Admin_Add';
 import Admin_AddStudent from './pages/admin_pages/Admin_AddStudent';
 import ViewStudentPackages from './pages/admin_pages/VIewStudentPackages';
+import ViewFeedback from './pages/admin_pages/ViewFeedBack';
+import Chatbot from 'react-chatbot-kit';
+import ChatBott from './chatbot/ChatBot';
 
 
 function App() {
@@ -47,7 +50,9 @@ function App() {
           <Route path='/adminsidebar' element = {<Admin_SideBar/>}/>
           <Route path='/adminnavbar' element = {<Admin_NavBar/>}/>
           <Route path='/adminadd' element = {<Admin_Add/>}/>
-          <Route path='/adminaddstudent' element = {<Admin_AddStudent/>} />       
+          <Route path='/adminaddstudent' element = {<Admin_AddStudent/>} />   
+          <Route path='/viewfeedback' element = {<ViewFeedback/>}   /> 
+          <Route path = '/bott' element = {<ChatBott/>}/>
          
 
         </Routes>

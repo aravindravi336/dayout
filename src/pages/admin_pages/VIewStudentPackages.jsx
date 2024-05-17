@@ -18,43 +18,37 @@ const AdminHome = () => {
         }
     };
 
-   const markAsDone = async (id) => {
-    try {
-        await axios.delete(`http://localhost:5000/Student/delete/${id}`);
-        fetchPackages(); // Refresh packages after marking as done
-    } catch (error) {
-        console.error('Error marking package as done:', error);
-    }
-};
-
-
-    const markAsNotCompleted = async (id) => {
+    const markAsDone = async (id) => {
         try {
-            // Here you might handle marking as not completed, if necessary
-            console.log("Mark as not completed function placeholder");
+            await axios.delete(`http://localhost:5000/Student/delete/${id}`).then((response)=>{
+                console.log(response.data);
+            });
+            fetchPackages();
         } catch (error) {
-            console.error('Error marking package as not completed:', error);
+            console.error('Error marking package as done:', error);
         }
     };
+
+
 
     return (
         <div>
             <Admin_Navbar />
             <div className="container">
-                
+
                 <div className="row g-3">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12-col-xxl-12">
                         <table className="table">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Institution</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Students</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Tickets</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">institution</th>
+                                    <th scope="col">inst_email</th>
+                                    <th scope="col">no_of_students</th>
+                                    <th scope="col">date</th>
+                                    <th scope="col">tickets</th>
+                                    <th scope="col">ticketType</th>
+                                    <th scope="col">phone</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,7 +60,9 @@ const AdminHome = () => {
                                         <td>{pkg.no_of_students}</td>
                                         <td>{pkg.date}</td>
                                         <td>{pkg.tickets}</td>
+                                        <td>{pkg.ticketType}</td>
                                         <td>{pkg.phone}</td>
+
                                         <td>
                                             <button
                                                 className="btn btn-success"
@@ -74,12 +70,7 @@ const AdminHome = () => {
                                             >
                                                 Mark as Done
                                             </button>
-                                            <button
-                                                className="btn btn-danger"
-                                                onClick={() => markAsNotCompleted(pkg._id)}
-                                            >
-                                                Mark as Not Completed
-                                            </button>
+
                                         </td>
                                     </tr>
                                 ))}
