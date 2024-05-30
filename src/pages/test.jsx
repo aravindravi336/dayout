@@ -15,6 +15,7 @@ const Book_Student_Package = () => {
 
     const [errors, setErrors] = useState({});
     const [showAlert, setShowAlert] = useState(false);
+    const [alreadyBooked, setAlreadyBooked] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -25,6 +26,9 @@ const Book_Student_Package = () => {
 
     const validate = () => {
         const errors = {};
+
+        // Validation logic here...
+
 
         if (!formData.institution.trim()) {
             errors.institution = 'Institution name is required';
@@ -60,47 +64,48 @@ const Book_Student_Package = () => {
             errors.phone = 'Phone number is invalid';
         }
 
+
+
         setErrors(errors);
         return Object.keys(errors).length === 0;
     };
 
-   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (validate()) {
-        try {
-            // Check if the package is already booked
-            const checkResponse = await axios.post('http://localhost:5000/Student/checkbooking', {
-                institution: formData.institution,
-                date: formData.date
-            });
-            if (checkResponse.status === 200) {
-                // If the package is available, proceed with booking
-                const response = await axios.post('http://localhost:5000/Student/addstudentpackage', formData);
-                if (response.status === 201) {
-                    setShowAlert(true); // Show success alert
-                    setTimeout(() => setShowAlert(false), 5000); // Hide alert after 5 seconds
-                    setFormData({
-                        institution: '',
-                        inst_email: '',
-                        no_of_students: '',
-                        date: '',
-                        tickets: '',
-                        ticketType: '', // Reset ticket type
-                        phone: ''
-                    });
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (validate()) {
+            try {
+                // Check if the package is already booked
+                const checkResponse = await axios.post('http://localhost:5000/Student/checkbooking', {
+                    institution: formData.institution,
+                    date: formData.date
+                });
+                if (checkResponse.status === 200) {
+                    // If the package is available, proceed with booking
+                    const response = await axios.post('http://localhost:5000/Student/addstudentpackage', formData);
+                    if (response.status === 201) {
+                        setShowAlert(true); // Show success alert
+                        setTimeout(() => setShowAlert(false), 5000); // Hide alert after 5 seconds
+                        setFormData({
+                            institution: '',
+                            inst_email: '',
+                            no_of_students: '',
+                            date: '',
+                            tickets: '',
+                            ticketType: '', // Reset ticket type
+                            phone: ''
+                        });
+                    } else {
+                        console.error('Failed to book student package:', response.statusText);
+                    }
                 } else {
-                    console.error('Failed to book student package:', response.statusText);
+                    // Show alert if the package is already booked
+                    setAlreadyBooked(true);
                 }
-            } else if (checkResponse.status === 404) {
-                // Show alert if the package is already booked
-                alert('Package already booked for this institution and date');
+            } catch (error) {
+                console.error('Failed to book student package:', error.message);
             }
-        } catch (error) {
-            console.error('Failed to book student package:', error.message);
         }
-    }
-};
-
+    };
 
     return (
         <div>
@@ -113,6 +118,11 @@ const Book_Student_Package = () => {
                             <div>
                                 Your student package has been booked successfully!
                             </div>
+                        </div>
+                    )}
+                    {alreadyBooked && (
+                        <div className="alert alert-danger" role="alert">
+                            This package is already booked.
                         </div>
                     )}
                     <form onSubmit={handleSubmit}>
